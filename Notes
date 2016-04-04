@@ -1,0 +1,9 @@
+1. 我创了一个新的youtube的账号：cse5522final 密码：ai12345678
+   现在我只弄了taylor swift的mv当做历史记录，想说从少一点历史开始分析， 然后再增加和拓宽观看纪录
+   
+2. 直接给url好困难。。因为YouTube的login的用户名和密码分页了。我省事了一点就直接copy的html 创了一个file。你们如果会搞cookie的    话就试试吧～
+
+3. 我用了BeautifulSoup4 去做web scraping， 如果你们要跑的话记得先安装。是BeautifulSoup4哦 不是BeautifulSoup。linux和pycharm都   可以装。他的api在这：
+   https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+
+4. line6 是我的文件地址， 你们要跑的时候记得改成你们的本地地址 comment掉我的。
