@@ -1,6 +1,19 @@
 import urllib
 import json
+from bs4 import BeautifulSoup
+import requests
+
+userIDs = []
 #Get top 1000 users on youtube
+for pageNum in range(1, 11, 1):
+    usersUrl = "http://www.statsheep.com/p/Top-Subscribers?page=" + str(pageNum)
+    usersPage = requests.get(usersUrl).text
+    soup = BeautifulSoup(usersPage, 'lxml')
+    dataTable = soup.find("table", class_="data-table")
+    hyperlinks = dataTable.findAll("a")
+    for link in hyperlinks:
+        userIDs += link.contents
+print len(userIDs)
 
 #Get the playlistIds in a channel's playlist
 url = "https://www.googleapis.com/youtube/v3/playlists?part=snippet&channelId=UCBkNpeyvBO2TdPGVC_PsPUA&key=AIzaSyDoXGmy_RpUY1cUYWCceN2kSWT4-vDZOaE"
